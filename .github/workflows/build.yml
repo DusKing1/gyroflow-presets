@@ -1,4 +1,4 @@
-name: CI - Indexer job (just check, we don't deploy to any server)
+name: CI - checkout
 
 on: [push, pull_request]
 
@@ -18,6 +18,3 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - if: github.ref != 'refs/heads/master' || github.repository_owner != 'gyroflow' 
-      name: Run the checker script
-      run: ./scripts/build.sh
