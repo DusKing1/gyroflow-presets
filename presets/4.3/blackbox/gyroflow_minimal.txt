@@ -2,10 +2,12 @@
 #$ FIRMWARE_VERSION: 4.3
 #$ CATEGORY: BLACKBOX
 #$ STATUS: OFFICIAL
-#$ KEYWORDS: defaults, reset, blackbox, logging, log
+#$ KEYWORDS: gyroflow, minimal, blackbox, logging, log, 
 #$ AUTHOR: DusKing1
 #$ DESCRIPTION: Minimal required settings for gyroflow.
+#$ INCLUDE: presets/4.3/blackbox/reset_blackbox.txt
 
+#$ OPTION BEGIN (CHECKED): gyroflow minimal requirements
 set blackbox_sample_rate = 1/4
 set blackbox_device = SPIFLASH
 set blackbox_disable_pids = ON
@@ -21,3 +23,8 @@ set blackbox_disable_debug = ON
 set blackbox_disable_motors = ON
 set blackbox_disable_gps = ON
 set blackbox_mode = NORMAL
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Horizon lock
+#set set blackbox_disable_acc = ON
+#$ OPTION END
