@@ -24,7 +24,7 @@ const PresetCategories = {
     FILTERS:        "FILTERS",
     RC_LINK:        "RC_LINK",
     BNF:            "BNF",
-    OTHER:          "OTHER",
+    BLACKBOX:       "BLACKBOX",
 }
 
 const OptionsDirectives = {
